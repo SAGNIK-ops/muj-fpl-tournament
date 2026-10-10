@@ -180,7 +180,7 @@ html, body, a, button, input {
  for(let i=0;i<FRAME_COUNT;i++){
    const img=new Image();
    img.decoding='async';
-   img.src='frames/frame_'+String(i+1).padStart(4,'0')+'.jpg';
+   img.src='frame_'+String(i+1).padStart(4,'0')+'.jpg';
    img.onload=()=>{loaded++;if(i===0 || currentFrame===i)drawFrame(i);if(loaded===FRAME_COUNT)update()};
    frames[i]=img;
  }
